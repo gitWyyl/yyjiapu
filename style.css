@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;              /* 最小视口高度 ---!!!!*/
+    max-height: 100vh;              /* 最大视口高度 ---!!!!*/
+    width: 100%;
+    font-size: 20px;
+
+	font-family: sans-serif;
+	background: #fafafa;
+	
+}
+
+/* ===== 头部 ===== */
+header {
+	display: flex;
+	justify-content: space-between; /* 左右分开 */
+	align-items: center;            /* 垂直居中 */
+	height: 48px;                   /* 固定高度，锁死中线 */
+	padding: 0 12px;                /* 左右留白压缩 */
+	background: #fafafa;
+	border-bottom: 1px solid #eee;
+}
+
+/* ===== 头部左侧 ===== */
+.header-left {
+	height: 48px;
+	display: flex;
+	align-items: center;
+	gap: 8px; /* 元素间最小间距 */
+	line-height: 48px; /* 与 header 同高，确保居中 */
+	margin: 0 0 0 20px;
+}
+
+/*===== 标题 */
+h1{
+	font-size: 22px;
+	font-weight: bold;
+	/* margin-right: 5px; */
+}
+
+/* ===== 头部右侧 ===== */
+.header-right {
+	height: 48px;
+	display: flex;
+	align-items: center;
+	gap: 8px; /* 元素间最小间距 */
+}
+
+/* ----- 登录钮  */
+.btn-login {
+	margin: 0;  
+	padding: 0 8px;
+	background: #4caf50;	
+	border: 1px solid #ccc; 
+	color: white;
+	border-radius: 4px;
+	line-height: 24px; /* 按钮内文字垂直居中 */
+	font-size: 14px;
+	cursor: pointer;
+	
+}
+
+/* ----- 登录钮 光标 */
+.btn-login:hover {
+	background: #45a049;
+}
+
+
+.icon-search, 
+.icon-settings {
+	cursor: pointer;
+	font-size: 20px;
+}
+
+
+
+/* ===== 主内容区 ===== */
+#iMain {
+	margin: 0 4px;
+	flex: 1; 						/* 占用剩余空间 ---!!!! */
+	/* display: flex;
+    flex-direction: column; */
+    background-color: #fafafa;
+    overflow: auto;               /* 超过范围自动溢出 ---!!!!*/
+  
+	
+    /* 关键：让子元素能继承高度 */
+	display: flex;
+
+}
+
+#iCanvas {
+	width: 100%;
+	background: #fafafa;
+
+	/* 核心：让 canvas 撑满父容器 */
+	flex: 1;
+	display: block;
+}
+
+/* ===== 页脚 ===== */
+footer{
+	background-color: #888;
+    color: white;
+    padding: 2px;
+	font-size: 14px;
+    text-align: center;	
+}
